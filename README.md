@@ -76,7 +76,7 @@ for K, V :=  range top {
 	fmt.Printf("%v --> %v\n", K, V)
 }
 // No results
-top, _ := E.TopN("Mad", 2)
+top, _ = E.TopN("Mad", 2)
 for K, V :=  range top {
 	fmt.Printf("%v --> %v\n", K, V)
 }
@@ -93,7 +93,7 @@ for K, V :=  range top {
 	fmt.Printf("%v --> %v\n", K, V)
 }
 // No results, because "Fury is not the exact prefix of any key"
-top, _ := E.TopN("Fur", 2)
+top, _ = E.TopN("Fur", 2)
 for K, V :=  range top {
 	fmt.Printf("%v --> %v\n", K, V)
 }
@@ -132,7 +132,7 @@ opts := skip.Options{
 **Skip Begin Example :**
 ```go
 opts := skip.Options{
-	MaxLevels: 5,	// Here N is 3
+	MaxLevels: 3,	// Here N is 3
 	ToLower: true,  // Case-insensitive
 	SkipBegin: true,// Match by skipping up to the first N words
 }

@@ -3,7 +3,6 @@ package skip
 import (
 	"strings"
 	"sync"
-	"log"
 
 	"github.com/zeyadyasser/autocom/complete"
 	"github.com/zeyadyasser/autocom/complete/tst"
@@ -141,7 +140,7 @@ func NewSkipEngine(opts Options, factory completerFactory) *SkipEngine{
 	}
 
 	if opts.MaxLevels == 0 {
-		log.Fatalf("MaxLevels should be at least 1, zero provieded.")
+		opts.MaxLevels = 1
 	}
 
 	engine := &SkipEngine{
